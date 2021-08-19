@@ -1,4 +1,4 @@
-# Task 1s
+# Task 1
 
 import datetime  # imports library
 
@@ -11,7 +11,7 @@ while True:
         age = int(age)
         break
     except ValueError:
-        # error message if entered input is not a integer
+        # error message if entered input is not an integer
         print('Sorry, I understand only whole numbers')
 
 currYear = datetime.datetime.now().year  # gets current year using library
