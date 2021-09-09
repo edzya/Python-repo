@@ -1,30 +1,30 @@
 # Task 1 FizzBuzz
 
-i = 1
-while i <= 100:
+# i = 1
+# while i <= 100:
 
-    if i % 5 == 0 and i % 7 == 0:
-        print('FizzBuzz', end=", ")
-    elif i % 5 == 0 and i == 100:
-        print('Fizz', end="")
-    elif i % 5 == 0:
-        print('Fizz', end=", ")
-    elif i % 7 == 0:
-        print('Buzz', end=", ")
-    else:
-        print(i, end=", ")
-    i += 1
+#     if i % 5 == 0 and i % 7 == 0:
+#         print('FizzBuzz', end=", ")
+#     elif i % 5 == 0 and i == 100:
+#         print('Fizz', end="")
+#     elif i % 5 == 0:
+#         print('Fizz', end=", ")
+#     elif i % 7 == 0:
+#         print('Buzz', end=", ")
+#     else:
+#         print(i, end=", ")
+#     i += 1
 
-# Task 2 Eglīte
+# # Task 2 Eglīte
 
-height = int(input('Lūdzu ievadiet eglītes augstumu: '))
+# height = int(input('Lūdzu ievadiet eglītes augstumu: '))
 
-x_cord = 1
-z_cord = height - 1
-for i in range(height):
-    print(" " * z_cord + "*" * x_cord + " " * z_cord)
-    x_cord += 2
-    z_cord -= 1
+# x_cord = 1
+# z_cord = height - 1
+# for i in range(height):
+#     print(" " * z_cord + "*" * x_cord + " " * z_cord)
+#     x_cord += 2
+#     z_cord -= 1
 
 # Task 3 Pirmskaitlis
 
