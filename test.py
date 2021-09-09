@@ -47,23 +47,55 @@
 # starting_word = 'nav'
 # ending_word = 'slikt'
 # starting_word_replacement = 'ir'
-# ending_word_replacement = 'lab'
-# order = original_text.find(ending_word)
+# # ending_word_replacement = 'lab'
+# # order = original_text.find(ending_word)
 
-# if starting_word in original_text and ending_word in original_text and text.index(starting_word) < text.index(ending_word + original_text[order + len(ending_word)]):
-#     text_before_starting_word = original_text.split(starting_word)[0]
-#     text_after_ending_word = original_text.split(ending_word)[1]
-#     print('Modified text: ' + text_before_starting_word + starting_word_replacement +
-#           ' ' + ending_word_replacement + text_after_ending_word)
-# else:
-#     if original_text != 'Only numbers 1 through 4 are accepted. Restart the application.':
-#         print('Nothing to fix here')
-#     else:
-#         print(original_text)
+# # if starting_word in original_text and ending_word in original_text and text.index(starting_word) < text.index(ending_word + original_text[order + len(ending_word)]):
+# #     text_before_starting_word = original_text.split(starting_word)[0]
+# #     text_after_ending_word = original_text.split(ending_word)[1]
+# #     print('Modified text: ' + text_before_starting_word + starting_word_replacement +
+# #           ' ' + ending_word_replacement + text_after_ending_word)
+# # else:
+# #     if original_text != 'Only numbers 1 through 4 are accepted. Restart the application.':
+# #         print('Nothing to fix here')
+# #     else:
+# #         print(original_text)
 
 
-squares = [num*num for num in range(10)]  # so we come up with num on the spot
-print(squares)
-squares_matrix = [[num, "squared", num*num] for num in range(10)]
-print(squares_matrix)  # so list of lists (2d array basically)
-print(squares_matrix[9][2], squares_matrix[-1][-1])
+# # squares = [num*num for num in range(10)]  # so we come up with num on the spot
+# # print(squares)
+# # squares_matrix = [[num, "squared", num*num] for num in range(10)]
+# # print(squares_matrix)  # so list of lists (2d array basically)
+# # print(squares_matrix[9][2], squares_matrix[-1][-1])
+
+# number_of_primes = input("cik primskaitļu nepieciešams atrast? ")
+# try:
+#     number_of_primes = int(number_of_primes)
+#     i = 1
+#     candidate = 3
+#     primes = ["1: 2"]
+#     while len(primes) < number_of_primes:
+#         is_prime = True
+#         i = 2
+#         while True:
+#             if candidate % i == 0:
+#                 is_prime = False
+#                 break
+#             i += 1
+#             if i > candidate**0.5:
+#                 break
+#         if is_prime:
+#             primes.append(str(len(primes)+1)+": "+str(candidate))
+#             # print(n)
+#         candidate += 1
+#     # print(primes)
+#     print(*primes, sep="\n")
+# except ValueError:
+#     print("nekorekta ievade")
+
+
+list_a = [1, 2, 10, 20]
+
+list_b = [2, 3, 10, 15]
+
+result = max(sum(list_a), sum(list_b))
