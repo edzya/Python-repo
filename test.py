@@ -94,8 +94,19 @@
 #     print("nekorekta ievade")
 
 
-list_a = [1, 2, 10, 20]
+# my_tuple = tuple(range(5))
+# print(my_tuple)
+# a, b, c, d, e = my_tuple
+# print(d)
 
-list_b = [2, 3, 10, 15]
 
-result = max(sum(list_a), sum(list_b))
+class TC:
+    my_val = ""
+
+    def __init__(self, my_val):
+        my_val = my_val
+
+
+c1 = TC("doh")
+c2 = TC("self")
+print(c1.my_val)
