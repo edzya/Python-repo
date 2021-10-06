@@ -134,5 +134,6 @@ def chooseMenu():
             addCategorie(catInput)
 
 
-while True:
-    chooseMenu()
+if __name__ == '__main__':
+    while True:
+        chooseMenu()
