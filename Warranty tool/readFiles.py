@@ -2,7 +2,6 @@ import xml.etree.ElementTree as ET
 from numpy import empty
 import pandas as pd
 import datetime as dt
-import main
 
 
 from pandas import DataFrame, concat
@@ -65,7 +64,10 @@ def readFiles(location):
             done['repair_date'] = newDate(repair_date.text)
         done['buchdat'] = cD.strftime('%d.%m.%Y')
         for loss in a.iter('loss'):
-            done['loss'] = loss.text
+            if(loss.text == '+1'):
+                done['loss'] = loss.text[1]
+            else:
+                done['loss'] = loss.text
         for total_time_units_partner in a.iter('total_time_units_partner'):
             done['total_time_units_partner'] = total_time_units_partner.text
         for tl_deal_deal_cur in a.iter('tl_deal_deal_cur'):
@@ -90,7 +92,7 @@ def readFiles(location):
         for paying_production_subsidiary in a.iter('paying_production_subsidiary'):
             done['paying_production_subsidiary'] = paying_production_subsidiary.text
         for importer_currency in a.iter('importer_currency'):
-            done['importer_currency'] = importer_currency.text
+            done['importer_currency'] = importer_currency.textnpm
         for claim_date in a.iter('claim_date'):
             done['claim_date'] = newDate(claim_date.text)
 
