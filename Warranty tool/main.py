@@ -1,8 +1,23 @@
-from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import *
+
+# from PyQt5 import QtWidgets
+# from PyQt5.QtWidgets import *
+from PyQt6 import QtWidgets
+from PyQt6.QtWidgets import *
 import readFiles
 import sqlite3
 from sqlite3 import Error
+
+
+class FormWindow(QWidget):
+    def __init__(self):
+        super().__init__()
+        layout = QVBoxLayout()
+        self.setWindowTitle('Warranty data')
+        self.label = QLabel('Form Window')
+        self.setGeometry(300, 300, 800, 600)
+        self.setFixedSize(800, 600)
+        layout.addWidget(self.label)
+        self.setLayout(layout)
 
 
 class MyWindow(QMainWindow):
@@ -22,14 +37,15 @@ class MyWindow(QMainWindow):
         self.label.adjustSize()
         self.b1 = QtWidgets.QPushButton(self)
         self.b1.setText("Export GAP file")
-        self.b1.move(220, 450)
+        self.b1.move(200, 25)
         self.b1.clicked.connect(self.chooseFiles)  # readFiles
         self.b2 = QtWidgets.QPushButton(self)
         self.b2.setText("Generate credit notes")
-        self.b2.setGeometry(350, 450, 150, 30)
+        self.b2.setGeometry(350, 25, 150, 30)
+        self.b2.clicked.connect(self.show_form)
         self.b3 = QtWidgets.QPushButton(self)
         self.b3.setText("Import file(s) to DB")
-        self.b3.move(530, 450)
+        self.b3.setGeometry(530, 25, 150, 30)
 
     def chooseFiles(self):
         self.allFiles = QtWidgets.QFileDialog.getOpenFileNames(
@@ -41,6 +57,10 @@ class MyWindow(QMainWindow):
 
     def update(self):
         self.label.adjustSize()
+
+    def show_form(self):
+        self.w = FormWindow()
+        self.w.show()
 
 
 stylesheet = """
@@ -136,4 +156,4 @@ if __name__ == "__main__":
     win = MyWindow()
 
     win.show()
-    sys.exit(app.exec_())
+    sys.exit(app.exec())
